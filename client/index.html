@@ -32,6 +32,11 @@
                 <h3>Total Expenses</h3>
                 <p id="expenses">$0.00</p>
             </div>
+
+            <div class="card">
+                <h3>Savings Goal Progress</h3>
+                <p id="goal-progress">No goal set</p>
+            </div>
         </section>
 
         <!-- ADD TRANSACTION FORM -->
@@ -49,6 +54,36 @@
 
                 <button type="submit">Add</button>
             </form>
+        </section>
+
+        <!-- SAVINGS GOAL SECTION -->
+        <section class="form-section">
+            <h2>Savings Goal</h2>
+
+            <!-- Set goal -->
+            <form id="goal-form">
+                <input type="number" id="goal-amount" placeholder="Set total goal amount" required />
+                <button type="submit">Save Goal</button>
+            </form>
+
+            <!-- Add contribution -->
+            <form id="goal-add-form" style="margin-top: 15px;">
+                <input type="number" id="goal-add-amount" placeholder="Add amount saved" required />
+                <button type="submit">Add to Goal</button>
+            </form>
+
+            <!-- Progress bar -->
+            <div id="goal-bar-container" style="
+                margin-top: 15px;
+                background:#ddd;
+                border-radius: 10px;
+                height: 20px;">
+                <div id="goal-bar" style="
+                    height: 100%;
+                    width: 0%;
+                    background: #007aff;
+                    border-radius: 10px;"></div>
+            </div>
         </section>
 
         <!-- TRANSACTION LIST -->
